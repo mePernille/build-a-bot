@@ -2,31 +2,33 @@
     <div>
         <div class="top-row">
             <div class="top part">
-                <img src="./images/head-big-eye.png" alt="head" />
+                <!--- Here we use the v-bind instead of the normal url.
+                    'The availableParts' need to be down in the <script> section -->
+                <img v-bind:src="availableParts.head[0].imagesUrl" alt="head" />
                 <button class="prev-selector">&#9668;</button>
                 <button class="next-selector">&#9658;</button>
             </div>
         </div>
         <div class="middle-row">
             <div class="left part">
-                <img src="./images/arm-articulated-claw.png" alt="left arm" />
+                <img v-bind:src="availableParts.head[0].imagesUrl" alt="left arm" />
                 <button class="prev-selector">&#9650;</button>
                 <button class="next-selector">&#9660;</button>
             </div>
             <div class="center part">
-                <img src="./images/torso-flexible-gauged.png" alt="torso" />
+                <img v-bind:src="availableParts.head[0].imagesUrl" alt="torso" />
                 <button class="prev-selector">&#9668;</button>
                 <button class="next-selector">&#9658;</button>
             </div>
             <div class="right part">
-                <img src="./images/arm-dual-claw.png" alt="right arm" />
+                <img v-bind:src="availableParts.head[0].imagesUrl" alt="right arm" />
                 <button class="prev-selector">&#9650;</button>
                 <button class="next-selector">&#9660;</button>
             </div>
         </div>
         <div class="bottom-row">
             <div class="bottom part">
-                <img src="./images/base-single-wheel.png" alt="base" />
+                <img v-bind:src="availableParts.head[0].imagesUrl" alt="base" />
                 <button class="prev-selector">&#9668;</button>
                 <button class="next-selector">&#9658;</button>
             </div>
@@ -35,8 +37,15 @@
 </template>
 
 <script>
+import parts from '../data/parts';
+
 export default {
   name: 'RobotBuilder',
+  data() {
+    return {
+      availableParts: parts,
+    };
+  },
 };
 </script>
 
