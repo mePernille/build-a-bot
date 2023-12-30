@@ -10,21 +10,21 @@
   </header>
   <main>
     <!--<HomePage msg="Welcome to Your Vue.js App"/> -->
-    <ProductSearch/>
+    <RobotBuilder/>
 </main>
 </template>
 
 <script>
 // import HomePage from './home/HomePage.vue';
-// import RobotBuilder from './build/RobotBuilder.vue';
-import ProductSearch from './search/ProductSearch.vue';
+import RobotBuilder from './build/RobotBuilder.vue';
+// import ProductSearch from './search/ProductSearch.vue';
 
 export default {
   name: 'App',
   components: {
     // HomePage,
-    // RobotBuilder,
-    ProductSearch,
+    RobotBuilder,
+    // ProductSearch,
   },
 };
 </script>
